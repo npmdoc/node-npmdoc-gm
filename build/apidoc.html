@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/aheckmann/gm"
-        
+
     >gm (v1.23.0)</a>
 </h1>
 <h4>GraphicsMagick and ImageMagick for node.js</h4>
@@ -58,151 +58,151 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.gm">module gm</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.compare">
             function <span class="apidocSignatureSpan">gm.</span>compare
             <span class="apidocSignatureSpan">(orig, compareTo, options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.subClass">
             function <span class="apidocSignatureSpan">gm.</span>subClass
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.super_">
             function <span class="apidocSignatureSpan">gm.</span>super_
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gm.</span>identifyHelpers</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gm.</span>utils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">gm.</span>version</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.gm.identifyHelpers">module gm.identifyHelpers</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.identifyHelpers.Colors">
             function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Colors
             <span class="apidocSignatureSpan">(o, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.identifyHelpers.Depth">
             function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Depth
             <span class="apidocSignatureSpan">(o, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.identifyHelpers.Format">
             function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Format
             <span class="apidocSignatureSpan">(o, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.identifyHelpers.Geometry">
             function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Geometry
             <span class="apidocSignatureSpan">(o, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.identifyHelpers.Orientation">
             function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Orientation
             <span class="apidocSignatureSpan">(o, val)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.gm.utils">module gm.utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.utils.argsToArray">
             function <span class="apidocSignatureSpan">gm.utils.</span>argsToArray
             <span class="apidocSignatureSpan">(args)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.utils.escape">
             function <span class="apidocSignatureSpan">gm.utils.</span>escape
             <span class="apidocSignatureSpan">(arg)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.utils.isUtil">
             function <span class="apidocSignatureSpan">gm.utils.</span>isUtil
             <span class="apidocSignatureSpan">(v)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.utils.unescape">
             function <span class="apidocSignatureSpan">gm.utils.</span>unescape
             <span class="apidocSignatureSpan">(arg)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gm" id="apidoc.module.gm">module gm</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.gm.compare" id="apidoc.element.gm.compare">
         function <span class="apidocSignatureSpan">gm.</span>compare
@@ -215,7 +215,7 @@
   var isImageMagick = this._options &#x26;&#x26; this._options.imageMagick;
   var appPath = this._options &#x26;&#x26; this._options.appPath || &#x27;&#x27;;
   var bin = isImageMagick
-    ? appPath + &#x27;compare&#x27; 
+    ? appPath + &#x27;compare&#x27;
     : appPath + &#x27;gm&#x27;
   var args = [&#x27;-metric&#x27;, &#x27;mse&#x27;, orig, compareTo]
   if (!isImageMagick) {
@@ -248,13 +248,13 @@
       }
       args.push(options.file);
     }
-    
+
     if (typeof options.tolerance != &#x27;undefined&#x27;) {
       if (typeof options.tolerance !== &#x27;number&#x27;) {
         throw new TypeError(&#x27;The tolerance value should be a number&#x27;);
       }
       tolerance = options.tolerance;
-    } 
+    }
   } else {
     // For ImageMagick diff file is required but we don&#x27;t care about it, so null it out
     if (isImageMagick) {
@@ -311,21 +311,21 @@
 
 ##compare
 
-Graphicsmagicks `compare` command is exposed through `gm.<span class="apidocCodeKeywordSpan">compare</span>()`. This allows us t\
-o determine if two images can be considered &#x22;equal&#x22;.
+Graphicsmagicks `compare` command is exposed through `gm.<span class="apidocCodeKeywordSpan">compare</span>()`. This allows us to
+ determine if two images can be considered &#x22;equal&#x22;.
 
 Currently `gm.compare` only accepts file paths.
 
     gm.compare(path1, path2 [, options], callback)
 
 ```js
-gm.compare(&#x27;/path/to/image1.jpg&#x27;, &#x27;/path/to/another.png&#x27;, function (err, isEqual, equality, raw, path1, path\
-2) {
+gm.compare(&#x27;/path/to/image1.jpg&#x27;, &#x27;/path/to/another.png&#x27;, function (err, isEqual, equality, raw, path1, path2
+) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.subClass" id="apidoc.element.gm.subClass">
         function <span class="apidocSignatureSpan">gm.</span>subClass
@@ -365,9 +365,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 ```
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.super_" id="apidoc.element.gm.super_">
         function <span class="apidocSignatureSpan">gm.</span>super_
@@ -380,20 +380,20 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gm.identifyHelpers" id="apidoc.module.gm.identifyHelpers">module gm.identifyHelpers</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.gm.identifyHelpers.Colors" id="apidoc.element.gm.identifyHelpers.Colors">
         function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Colors
@@ -406,9 +406,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.identifyHelpers.Depth" id="apidoc.element.gm.identifyHelpers.Depth">
         function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Depth
@@ -421,9 +421,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.identifyHelpers.Format" id="apidoc.element.gm.identifyHelpers.Format">
         function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Format
@@ -436,9 +436,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.identifyHelpers.Geometry" id="apidoc.element.gm.identifyHelpers.Geometry">
         function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Geometry
@@ -464,9 +464,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.identifyHelpers.Orientation" id="apidoc.element.gm.identifyHelpers.Orientation">
         function <span class="apidocSignatureSpan">gm.identifyHelpers.</span>Orientation
@@ -485,14 +485,14 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gm.utils" id="apidoc.module.gm.utils">module gm.utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.gm.utils.argsToArray" id="apidoc.element.gm.utils.argsToArray">
         function <span class="apidocSignatureSpan">gm.utils.</span>argsToArray
@@ -512,9 +512,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.utils.escape" id="apidoc.element.gm.utils.escape">
         function <span class="apidocSignatureSpan">gm.utils.</span>escape
@@ -527,9 +527,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.utils.isUtil" id="apidoc.element.gm.utils.isUtil">
         function <span class="apidocSignatureSpan">gm.utils.</span>isUtil
@@ -554,9 +554,9 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.gm.utils.unescape" id="apidoc.element.gm.utils.unescape">
         function <span class="apidocSignatureSpan">gm.utils.</span>unescape
@@ -569,8 +569,8 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
