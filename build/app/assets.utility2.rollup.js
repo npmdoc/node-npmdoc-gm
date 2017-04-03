@@ -628,15 +628,18 @@ local.templateApidocMd = '\
                 template: local.templateApidocHtml
             });
             // init exampleList
-            options.exampleList = options.exampleList.concat(options.exampleFileList.concat(
-                local.fs.readdirSync(options.dir)
-                    .sort()
-                    .filter(function (file) {
-                        return file.indexOf(options.env.npm_package_main) === 0 ||
-                            (/^(?:readme)\b/i).test(file) ||
-                            (/^(?:index|lib|test)\b.*\.js$/i).test(file);
-                    })
-            ).map(readExample));
+            try {
+                options.exampleList = options.exampleList.concat(options.exampleFileList.concat(
+                    local.fs.readdirSync(options.dir)
+                        .sort()
+                        .filter(function (file) {
+                            return file.indexOf(options.env.npm_package_main) === 0 ||
+                                (/^(?:readme)\b/i).test(file) ||
+                                (/^(?:index|lib|test)\b.*\.js$/i).test(file);
+                        })
+                ).map(readExample));
+            } catch (ignore) {
+            }
             // init moduleMain
             try {
                 moduleMain = {};
@@ -11951,8 +11954,21 @@ return Utf8ArrayToStr(bff);
         /*
          * this function will build the npmdoc
          */
-            var onParallel, packageJson;
-            onParallel = local.utility2.onParallel(onError);
+            var done, onError2, onParallel, packageJson;
+            // ensure exit after 5 minutes
+            setTimeout(process.exit, 5 * 60 * 1000);
+            onError2 = function (error) {
+                local.onErrorDefault(error);
+                if (done) {
+                    return;
+                }
+                done = true;
+                // try to recover from error
+                setTimeout(onError, error && local.timeoutDefault);
+            };
+            // try to salvage uncaughtException
+            process.on('uncaughtException', onError2);
+            onParallel = local.utility2.onParallel(onError2);
             onParallel.counter += 1;
             // build package.json
             packageJson = JSON.parse(local.fs.readFileSync('package.json', 'utf8'));
