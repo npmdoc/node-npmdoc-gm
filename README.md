@@ -1,11 +1,13 @@
-# api documentation for  [gm (v1.23.0)](https://github.com/aheckmann/gm)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gm.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gm)
+# api documentation for  [gm (v1.23.0)](https://github.com/aheckmann/gm)  [![npm package](https://img.shields.io/npm/v/npmdoc-gm.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gm) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gm.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gm)
 #### GraphicsMagick and ImageMagick for node.js
 
 [![NPM](https://nodei.co/npm/gm.png?downloads=true)](https://www.npmjs.com/package/gm)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gm/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gm_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gm/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gm/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gm_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gm/build..beta..travis-ci.org/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-gm/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gm/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-gm/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
