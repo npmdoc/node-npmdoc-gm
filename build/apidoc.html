@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.gm.gm">
+            function <span class="apidocSignatureSpan"></span>gm
+            <span class="apidocSignatureSpan">(source, height, color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.gm.compare">
             function <span class="apidocSignatureSpan">gm.</span>compare
             <span class="apidocSignatureSpan">(orig, compareTo, options, cb)</span>
@@ -83,6 +92,15 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.gm.super_">
             function <span class="apidocSignatureSpan">gm.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gm.toString">
+            function <span class="apidocSignatureSpan">gm.</span>toString
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -201,6 +219,81 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gm" id="apidoc.module.gm">module gm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gm.gm" id="apidoc.element.gm.gm">
+        function <span class="apidocSignatureSpan"></span>gm
+        <span class="apidocSignatureSpan">(source, height, color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gm(source, height, color) {
+  var width;
+
+  if (!(this instanceof gm)) {
+    return new gm(source, height, color);
+  }
+
+  EventEmitter.call(this);
+
+  this._options = {};
+  this.options(this.__proto__._options);
+
+  this.data = {};
+  this._in = [];
+  this._out = [];
+  this._outputFormat = null;
+  this._subCommand = &#x27;convert&#x27;;
+
+  if (source instanceof Stream) {
+    this.sourceStream = source;
+    source = height || &#x27;unknown.jpg&#x27;;
+  } else if (Buffer.isBuffer(source)) {
+    this.sourceBuffer = source;
+    source = height || &#x27;unknown.jpg&#x27;;
+  } else if (height) {
+    // new images
+    width = source;
+    source = &#x22;&#x22;;
+
+    this.in(&#x22;-size&#x22;, width + &#x22;x&#x22; + height);
+
+    if (color) {
+      this.in(&#x22;xc:&#x22;+ color);
+    }
+  }
+
+  if (typeof source === &#x22;string&#x22;) {
+    // then source is a path
+
+    // parse out gif frame brackets from filename
+    // since stream doesn&#x27;t use source path
+    // eg. &#x22;filename.gif[0]&#x22;
+    var frames = source.match(/(\[.+\])$/);
+    if (frames) {
+      this.sourceFrames = source.substr(frames.index, frames[0].length);
+      source = source.substr(0, frames.index);
+    }
+  }
+
+  this.source = source;
+
+  this.addSrcFormatter(function (src) {
+    // must be first source formatter
+
+    var inputFromStdin = this.sourceStream || this.sourceBuffer;
+    var ret = inputFromStdin ? &#x27;-&#x27; : this.source;
+
+    if (ret &#x26;&#x26; this.sourceFrames) ret += this.sourceFrames;
+
+    src.length = 0;
+    src[0] = ret;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -377,6 +470,21 @@ gm(&#x27;/path/to/my/img.jpg&#x27;)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
   EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gm.toString" id="apidoc.element.gm.toString">
+        function <span class="apidocSignatureSpan">gm.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return toString;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
