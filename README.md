@@ -1,6 +1,6 @@
 # npmdoc-gm
 
-#### api documentation for  [gm (v1.23.0)](https://github.com/aheckmann/gm)  [![npm package](https://img.shields.io/npm/v/npmdoc-gm.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gm) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gm.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gm)
+#### basic api documentation for  [gm (v1.23.0)](https://github.com/aheckmann/gm)  [![npm package](https://img.shields.io/npm/v/npmdoc-gm.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gm) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gm.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gm)
 
 #### GraphicsMagick and ImageMagick for node.js
 
@@ -90,7 +90,8 @@
     "scripts": {
         "test": "make test-unit; make test;"
     },
-    "version": "1.23.0"
+    "version": "1.23.0",
+    "bin": {}
 }
 ```
 
